@@ -1,0 +1,2 @@
+# coloredCoinsTest
+colored coinのテスト

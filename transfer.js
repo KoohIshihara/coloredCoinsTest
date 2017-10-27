@@ -4,12 +4,15 @@ var request = require('request');
 
 
 var issuance_address = 'mpdTY6AteyXopN6wVH7KzpRvqaCiaDNekT';
-
+/*
 var key = bitcoin.ECKey.makeRandom();
 var to_address = key.pub.getAddress(bitcoin.networks.testnet).toString();
 var wif = key.toWIF();
 console.log('new TESTNET address: ['+to_address+']');
 console.log('Private Key of new address (WIF format): ['+wif+']');
+*/
+
+var to_address = 'mxbnvfdDAc3nTHuzyojdzDpgcm9bBW7DZR'; // wif : L4FNLAuMAiFTmQQh1V4onv99gZfsCyEpa7HAYDfwHA8TsG6afqHv
 
 var send_asset = {
     'from': [issuance_address],   

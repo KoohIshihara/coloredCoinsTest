@@ -1,0 +1,1 @@
+alert("gulpでbrowserifyによるbundleの自動化");

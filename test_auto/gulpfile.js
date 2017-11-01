@@ -6,8 +6,7 @@ var source = require('vinyl-source-stream');
 
 var SERVER_PORT = 4000;
 
-
-gulp.task('default', function() {
+gulp.task('server', function() {
   // place code for your default task here
   gulp.src('./')
     .pipe(webserver({
@@ -16,7 +15,6 @@ gulp.task('default', function() {
       port: SERVER_PORT
     }));
 });
-
 
 gulp.task('js', function(){
   browserify({
@@ -27,3 +25,11 @@ gulp.task('js', function(){
   .pipe(source('main.js')) // ビルド後のファイル名
   .pipe(gulp.dest('js/')); // ビルド後のファイルを配置するディレクトリ
 });
+
+var target = ['./js/*.js'];
+
+gulp.task('watch', function(){
+  gulp.watch(target, ['js']);
+});
+
+gulp.task('default', ['server','watch','js']);

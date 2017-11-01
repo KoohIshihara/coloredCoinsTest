@@ -1,1 +1,1 @@
-alert("gulpでbrowserifyによるbundleの自動化");
+console.log("gulpでbrowserifyによるbundle自動化した〜");

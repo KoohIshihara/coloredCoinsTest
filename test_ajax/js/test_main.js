@@ -5,7 +5,7 @@ var getAddress = require('./getAdress.js');
 console.log(bitcoin);
 
 window.onload = function () {
-  $("#libtest").click(function() {
+  $("#getAdress").click(function() {
     console.log(getAddress());
   });
 };

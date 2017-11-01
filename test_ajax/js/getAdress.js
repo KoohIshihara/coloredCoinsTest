@@ -1,7 +1,7 @@
 // address.js
-var getAddress = function() {
-  var bitcoin = require('bitcoinjs-lib');
+var bitcoin = require('bitcoinjs-lib');
 
+var getAddress = function() {
   var key = bitcoin.ECKey.makeRandom();
   var address = key.pub.getAddress(bitcoin.networks.testnet).toString();
   var wif = key.toWIF();
@@ -10,5 +10,5 @@ var getAddress = function() {
   var result = {wif:wif, address: address};
   return result;
 }
- 
+
 module.exports = getAddress;

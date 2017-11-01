@@ -6490,9 +6490,9 @@ function hasOwnProperty(obj, prop) {
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./support/isBuffer":31,"_process":12,"inherits":30}],33:[function(require,module,exports){
 // address.js
-var getAddress = function() {
-  var bitcoin = require('bitcoinjs-lib');
+var bitcoin = require('bitcoinjs-lib');
 
+var getAddress = function() {
   var key = bitcoin.ECKey.makeRandom();
   var address = key.pub.getAddress(bitcoin.networks.testnet).toString();
   var wif = key.toWIF();
@@ -6511,7 +6511,7 @@ var getAddress = require('./getAdress.js');
 console.log(bitcoin);
 
 window.onload = function () {
-  $("#libtest").click(function() {
+  $("#getAdress").click(function() {
     console.log(getAddress());
   });
 };
